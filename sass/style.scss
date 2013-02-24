@@ -1,0 +1,37 @@
+@import "compass";
+
+@mixin transform($params){
+	-webkit-transform :$params;
+	-moz-transform: $params;
+	transform : $params;
+}
+@mixin animation($params){
+	-webkit-animation: $params;
+	-moz-animation: $params;
+	animation : $params;
+}
+
+@mixin keyframes($name) { 
+    @-webkit-keyframes $name { @content }
+}
+@mixin anim($animName, $steps, $animNbr, $animParams){
+    .#{$animName} { 
+        @content;
+        @include animation($animName steps($steps) $animParams); 
+    }
+    @include keyframes($animName) {
+        from { background-position:0px (-$spriteHeight * ($animNbr - 1)); }
+          to { background-position:-($spriteWidth * $steps) (-$spriteHeight * ($animNbr - 1)); }
+    }
+}
+$spriteWidth:70px;
+$spriteHeight:80px;
+
+.ken { 
+    position:absolute; bottom:112px; margin-left:150px;
+    width:$spriteWidth; height:$spriteHeight; 
+    background-image:url('ken.png'); 
+}
+@include anim($animName:kneel, $steps:1, $animNbr:10, $animParams:.2s infinite);
+@include anim($animName:punch, $steps:3, $animNbr:3, $animParams:.15s infinite);
+@include anim($animName:reversekick, $steps:5, $animNbr:8, $animParams:.5s infinite);

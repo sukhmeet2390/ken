@@ -1,0 +1,66 @@
+/* line 30, ../sass/style.scss */
+.ken {
+  position: absolute;
+  bottom: 112px;
+  margin-left: 150px;
+  width: 70px;
+  height: 80px;
+  background-image: url("ken.png");
+}
+
+/* line 18, ../sass/style.scss */
+.kneel {
+  -webkit-animation: kneel steps(1) 0.2s infinite;
+  -moz-animation: kneel steps(1) 0.2s infinite;
+  animation: kneel steps(1) 0.2s infinite;
+}
+
+@-webkit-keyframes kneel {
+  /* line 23, ../sass/style.scss */
+  from {
+    background-position: 0px -720px;
+  }
+
+  /* line 24, ../sass/style.scss */
+  to {
+    background-position: -70px -720px;
+  }
+}
+
+/* line 18, ../sass/style.scss */
+.punch {
+  -webkit-animation: punch steps(3) 0.15s infinite;
+  -moz-animation: punch steps(3) 0.15s infinite;
+  animation: punch steps(3) 0.15s infinite;
+}
+
+@-webkit-keyframes punch {
+  /* line 23, ../sass/style.scss */
+  from {
+    background-position: 0px -160px;
+  }
+
+  /* line 24, ../sass/style.scss */
+  to {
+    background-position: -210px -160px;
+  }
+}
+
+/* line 18, ../sass/style.scss */
+.reversekick {
+  -webkit-animation: reversekick steps(5) 0.5s infinite;
+  -moz-animation: reversekick steps(5) 0.5s infinite;
+  animation: reversekick steps(5) 0.5s infinite;
+}
+
+@-webkit-keyframes reversekick {
+  /* line 23, ../sass/style.scss */
+  from {
+    background-position: 0px -560px;
+  }
+
+  /* line 24, ../sass/style.scss */
+  to {
+    background-position: -350px -560px;
+  }
+}
